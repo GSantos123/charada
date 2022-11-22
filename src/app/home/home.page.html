@@ -1,15 +1,12 @@
+<ion-content>
 <div class="fundo">
   <div class="conteudo"[class.puff-in-center]="animacao">
-      <div class="charada">-{{charada}}</div>
-      <ion-button (click)="Revelar">Revelar</ion-button>
+      <div class="pergunta">-{{pergunta}}</div>
+      <ion-button class="revelarBotao" (click)="Revelar()">Revelar</ion-button>
       <div class="resposta">-{{resposta}}</div>
-      <ion-button (click)="Gerar">Nova Charada</ion-button>
+      <ion-button (click)="refresh()">Nova Charada</ion-button>
 
   </div>
 </div>
 
-<ion-fab slot = "fixed" vertical="bottom" hotizontal="end">
-  <ion-fab-button (click)="solicitarCharada()">
-      <ion-icon name="refresh"></ion-icon>
-  </ion-fab-button>
-</ion-fab>
+</ion-content>

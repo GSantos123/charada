@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { Keyboard } from '@capacitor/keyboard';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  charada: string='';
+  pergunta: string='';
   resposta: string='';
-
+  respostaSecreta: string='';
+  
 
   animacao:boolean=false;
   constructor(private http: HttpClient) {}
@@ -22,21 +24,27 @@ export class HomePage {
     this.animacao=false;
     const url = "http://lucasreno.kinghost.net/charada";
     this.http.get<any[]>(url).subscribe( charada => {
-      this.charada = charada[0].charada;
-      this.resposta = charada[0].resposta;  
+      this.pergunta = charada[0].pergunta;
+      this.respostaSecreta = charada[0].resposta;
       this.animacao = true;
     });
   }
 
   Revelar(){
     
-    
-  }
+    this.solicitarResposta();
 
-  Gerar(){
-
-    this.solicitarCharada;
 
   }
+  
+  solicitarResposta(){
+    this.resposta = this.respostaSecreta;
+  }
+
+  refresh(): void {
+    window.location.reload();
+}
+
+  
 
 }

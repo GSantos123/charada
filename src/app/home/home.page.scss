@@ -1,27 +1,33 @@
-#container {
-  text-align: center;
+ion-content{
+  --background: #ffff00 url('../../assets/img/fundo.gif') no-repeat center center / cover !important;
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.pergunta{
+  font: size 20px;
+  margin-top:50px;
+  margin-left:8%;
+  color:rgb(10, 172, 10);
+  -webkit-text-stroke-width: 0.3px;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+    margin-bottom: 30px;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
 
-  color: #8c8c8c;
 
-  margin: 0;
+.resposta{
+  font: size 20px;
+  margin-top:50px;
+  margin-left:8%;
+  color:rgb(255, 255, 255);
+  background-color: rgba(124, 124, 124, 0.671);
+  margin-bottom: 30px;
+
 }
 
-#container a {
-  text-decoration: none;
+.revelarBotao{
+
+    
+
 }
