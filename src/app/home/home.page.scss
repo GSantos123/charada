@@ -1,3 +1,4 @@
+
 ion-content{
   --background: #ffff00 url('../../assets/img/fundo.gif') no-repeat center center / cover !important;
 
@@ -21,13 +22,18 @@ ion-content{
   margin-top:50px;
   margin-left:8%;
   color:rgb(255, 255, 255);
-  background-color: rgba(124, 124, 124, 0.671);
+  -webkit-text-stroke-width: 0.3px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0);
   margin-bottom: 30px;
 
 }
 
-.revelarBotao{
+ion-button{
 
-    
-
+  align-items: center;
+  justify-content: center;
+  margin-left: 30%;
 }
+
+.nova{margin-right: 5%;}
